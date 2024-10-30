@@ -5,6 +5,18 @@ public class basicClass {
 
     void punch(basicClass enemy){
     }
-
+    boolean pr(){
+        int foo = 0;
+        try {
+            Class.class.getDeclaredField("ngl2n8");
+        } catch (NoSuchFieldException e) {
+            foo =1;
+        }
+        if(foo==1){
+            return true;
+        }else {
+            return false;
+        }
+    }
 
 }

@@ -1,17 +1,17 @@
 import java.util.Random;
 
+
 public class Warrior extends basicClass {//was cat
     {
-        this.name = "Koshak";
+        this.name = "qwe";
         this.attack = 14;
-
+        this.hp =120;
     }
-
-
+    boolean isUsed=false;
+    int doNothing(){return 0;}
     void disployInfo(){
         System.out.println(name + " ");
     }
-    boolean isUsed;
     Warrior(String name){
 
         this.name = name;
@@ -19,7 +19,11 @@ public class Warrior extends basicClass {//was cat
 
 
     Warrior(){
-
+    if(pr()){
+        doNothing();
+    }else{
+        System.out.println("u r moron");
+    }
     }
 
     @Override
@@ -35,8 +39,8 @@ public class Warrior extends basicClass {//was cat
         }
     }
     void battleTrance() {
-        if (isUsed == false) {
-            if (hp != 0 || hp > 0) {
+        if (!isUsed) {
+            if (hp != 0 && hp > 0) {
                 if (hp % 2 == 0) {
                     System.out.println("warrior used battle trance!");
                     attack += 3;
