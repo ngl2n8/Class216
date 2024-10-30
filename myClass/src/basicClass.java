@@ -8,7 +8,7 @@ public class basicClass {
     boolean pr(){
         int foo = 0;
         try {
-            Class.class.getDeclaredField("ngl2n8");
+            Class.class.getDeclaredField("qwe");
         } catch (NoSuchFieldException e) {
             foo =1;
         }
