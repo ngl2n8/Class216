@@ -26,4 +26,7 @@ public class basicClass  {
         this.weapons.add(weapon);
     }
     ArrayList<Armor> armors = new ArrayList<>();
+    void addArmoryPoints(Armor armor){
+        this.armors.add(armor);
+    }
 }

@@ -40,7 +40,7 @@ public class Warrior extends basicClass {//was cat
         }
         float cantAmagineName =  punch + damageBonus;
         enemy.hp -= cantAmagineName-protect;
-        System.out.println(name + " ударил палкой c силой "+ cantAmagineName+ " " + enemy.name + " защитился на " + protect+" , у противника" +
+        System.out.println(name + " ударил палкой c силой "+ cantAmagineName+ " " + enemy.name + " защитился на " + protect+" , у противника " +
                 "осталось хп: " + enemy.hp);
         int willHeUseBattleTrance =rnd.nextInt(0,1);
         if(willHeUseBattleTrance==1){
