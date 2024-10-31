@@ -1,4 +1,6 @@
-public class basicClass {
+import java.util.ArrayList;
+
+public class basicClass  {
     String name;
     int hp = 50;
     int attack;
@@ -18,5 +20,10 @@ public class basicClass {
             return false;
         }
     }
-
+    ArrayList<Weapon> weapons = new ArrayList<>();
+    void addDamage(Weapon weapon){
+//        weapon.damageBonus +=foo;
+        this.weapons.add(weapon);
+    }
+    ArrayList<Armor> armors = new ArrayList<>();
 }

@@ -30,8 +30,17 @@ public class Warrior extends basicClass {//was cat
     void punch(basicClass enemy) {
         Random rnd = new Random();
         int punch = attack + rnd.nextInt(-5, 5);
-        enemy.hp -= punch;
-        System.out.println(name + " ударил палкой c силой "+ punch + " " + enemy.name + " , у противника" +
+        int damageBonus=0;
+        for(Weapon weap : weapons){
+            damageBonus += weap.damageBonus;
+        }
+        float protect=0;
+        for(Armor arm : armors){
+            protect +=arm.minusDamage;
+        }
+        float cantAmagineName =  punch + damageBonus;
+        enemy.hp -= cantAmagineName-protect;
+        System.out.println(name + " ударил палкой c силой "+ cantAmagineName+ " " + enemy.name + " защитился на " + protect+" , у противника" +
                 "осталось хп: " + enemy.hp);
         int willHeUseBattleTrance =rnd.nextInt(0,1);
         if(willHeUseBattleTrance==1){

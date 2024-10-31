@@ -18,9 +18,17 @@ public class magician extends basicClass{
         } else if (Math.abs(rnd.nextInt(-11, 11))%2==0) {
             regenMana();
         } else {
-//            doNothing();
-            enemy.hp -= punch;
-            System.out.println(name + " ударил с силой "+ punch + " " + enemy.name + " , у противника" +
+            int damageBonus=0;
+            for(Weapon weap : weapons){
+                damageBonus += weap.damageBonus;
+            }
+            float protect=0;
+            for(Armor arm : armors){
+                protect +=arm.minusDamage;
+            }
+            float cantAmagineName =  punch + damageBonus;
+            enemy.hp -= cantAmagineName-protect;
+            System.out.println(name + " ударил палкой c силой "+ cantAmagineName+ " " + enemy.name + " защитился на " + protect+" , у противника" +
                     "осталось хп: " + enemy.hp);
         }
 
