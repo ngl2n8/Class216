@@ -1,6 +1,11 @@
-public class Weapon {
+public class Weapon implements Weaponable{
     int damageBonus;
     Weapon(int bonus){
-        this.damageBonus =bonus;
+        addDamage(bonus);
+    }
+
+    @Override
+    public void addDamage(int value) {
+        this.damageBonus =value;
     }
 }
