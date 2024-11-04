@@ -1,14 +1,18 @@
 
 public class Main {
     public static void main(String[] args) {
-        Archer g1 = new Archer("random luchnik");
-        Warrior g2 = new Warrior(" Tom Kruz");
-        Armor armory = new Armor(10);
-        g2.addArmoryPoints(armory);
-        g2.disployInfo();
+        Archer luchnik = new Archer("random luchnik");
+        Warrior voin = new Warrior(" Tom Kruz");
+        Magician mag = new Magician("mag epta");
+        Armor armory = new Armor(2);
+        Weapon weapon = new Weapon(1);
+        voin.addArmoryPoints(armory);
+        mag.addArmoryPoints(armory);
+        mag.addDamage(weapon);
 
 
-        battle(g2, g1);
+
+        battle(voin, mag);
     }
 
     static void battle(basicClass an1, basicClass an2){

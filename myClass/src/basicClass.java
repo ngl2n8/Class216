@@ -2,10 +2,11 @@ import java.util.ArrayList;
 
 public abstract class basicClass {
     String name;
-    int hp = 50;
+    int hp = 0;
     int attack;
 
     abstract void punch(basicClass enemy);
+    int doNothing(){return 0;}
     boolean pr(){
         int foo = 0;
         try {

@@ -9,9 +9,6 @@ public class Warrior extends basicClass {//was cat
     }
     boolean isUsed=false;
     int doNothing(){return 0;}
-    void disployInfo(){
-        System.out.println(name + " ");
-    }
     Warrior(String name){
 
         this.name = name;
@@ -38,9 +35,9 @@ public class Warrior extends basicClass {//was cat
         for(Armor arm : armors){
             protect +=arm.minusDamage;
         }
-        float cantAmagineName =  punch + damageBonus;
-        enemy.hp -= cantAmagineName-protect;
-        System.out.println(name + " ударил палкой c силой "+ cantAmagineName+ " " + enemy.name + " защитился на " + protect+" , у противника " +
+        float cantImagineName =  punch + damageBonus;
+        enemy.hp -= (cantImagineName-protect);
+        System.out.println(name + " ударил палкой c силой "+ cantImagineName+ " " + enemy.name + " защитился на " + protect+" , у противника " +
                 "осталось хп: " + enemy.hp);
         int willHeUseBattleTrance =rnd.nextInt(0,1);
         if(willHeUseBattleTrance==1){

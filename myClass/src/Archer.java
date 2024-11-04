@@ -15,9 +15,15 @@ public class Archer extends basicClass
     void punch(basicClass enemy) {
         Random rnd = new Random();
         int punch = attack + rnd.nextInt(-12, 7);
-        enemy.hp -= punch;
-        System.out.println(name + " ударил с силой "+ punch + " " + enemy.name + " , у противника " +
-                "осталось хп: " + enemy.hp);
+        if (punch == 7) {
+            shoot(enemy);
+        } else {
+            doNothing();
+            enemy.hp -= punch;
+            System.out.println(name + " ударил с силой "+ punch + " " + enemy.name + " , у противника " +
+                    "осталось хп: " + enemy.hp);
+        }
+
     }
     void shoot(basicClass enemy){
         Random rnd = new Random();

@@ -2,11 +2,14 @@ import java.util.Random;
 
 import static java.lang.Math.pow;
 
-public class magician extends basicClass{
+public class Magician extends basicClass{
     {
         this.hp=80;
         this.attack=5;
-
+        this.name ="foo";
+    }
+    Magician(String footer){
+        this.name=footer;
     }
     int mana = 1;
     @Override
@@ -26,9 +29,9 @@ public class magician extends basicClass{
             for(Armor arm : armors){
                 protect +=arm.minusDamage;
             }
-            float cantAmagineName =  punch + damageBonus;
-            enemy.hp -= cantAmagineName-protect;
-            System.out.println(name + " ударил палкой c силой "+ cantAmagineName+ " " + enemy.name + " защитился на " + protect+" , у противника" +
+            float cantImagineName =  punch + damageBonus;
+            enemy.hp -= cantImagineName-protect;
+            System.out.println(name + " ударил "+ cantImagineName+ " " + enemy.name + " защитился на " + protect+" , у противника" +
                     "осталось хп: " + enemy.hp);
         }
 
